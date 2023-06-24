@@ -1,7 +1,6 @@
 window.onload = () => {
   if (isAccessToken()) {
     alert("Already Signed Up");
-    window.location.href = "/accio-f3-contest2/profile.html";
   }
 };
 
@@ -42,8 +41,6 @@ const signUp = () => {
   console.log(accessToken);
   const userState = { name, email, password, accessToken };
 
-  localStorage.setItem("userState", JSON.stringify(userState));
-  setTimeout(() => (window.location.href = "/accio-f3-contest2/profile.html"), 500);
 };
 
 // for generating access token
